@@ -32,6 +32,6 @@
     "image": "./static/img/mcdonalds.png",
     "name": "Waiting at McDonal's",
     "description": "Audio by <a href=\"https://soundcloud.com/user-832426202/soundscape-mcdonalds\" target=\"_blank\">Soundscapes</a>. Photo by <a href=\"https://unsplash.com/photos/XI61zcanw28?utm_source=noisyloop.web.app&utm_medium=referral\" target=\"_blank\">XUNO.</a> on <a href=\"https://unsplash.com/?utm_source=noisyloop.web.app&utm_medium=referral\">Unsplash</a>",
-    "audio": "./static/mp3/mcdonals.mp3"
+    "audio": "./static/mp3/mcdonalds.mp3"
   }
 ]
