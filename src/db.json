@@ -1,35 +1,35 @@
 [
   {
     "id": "1",
-    "image": "./static/img/railway-junction-india.png",
+    "image": "./static/img/railway-junction-india.jpg",
     "name": "Railway Station - India",
     "description": "Audio by <a href=\"https://soundcloud.com/user-238582018/pune-junction-railway-station\" target=\"_blank\">Soundscapes of Pune City</a>. Photo by <a href=\"https://unsplash.com/photos/fcm2ZbMBHxg?utm_source=noisyloop.web.app&utm_medium=referral\" target=\"_blank\">Yash Bhardwaj</a> on <a href=\"https://unsplash.com/?utm_source=noisyloop.web.app&utm_medium=referral\">Unsplash</a>",
     "audio": "./static/mp3/railway-junction-india.mp3"
   },
   {
     "id": "2",
-    "image": "./static/img/vegetable-market-india.png",
+    "image": "./static/img/vegetable-market-india.jpg",
     "name": "Vegetable Market - India",
     "description": "Audio by <a href=\"https://soundcloud.com/user-238582018/vegetable-market-bt-kawade-road-post-demonetization\" target=\"_blank\">Soundscapes of Pune City</a>. Photo by <a href=\"https://unsplash.com/photos/G-5B6hqjMU8?utm_source=noisyloop.web.app&utm_medium=referral\" target=\"_blank\">Shashank Hudkar</a> on <a href=\"https://unsplash.com/?utm_source=noisyloop.web.app&utm_medium=referral\">Unsplash</a>",
     "audio": "./static/mp3/vegetable-market-india.mp3"
   },
   {
     "id": "3",
-    "image": "./static/img/traffic-chorus-india.png",
+    "image": "./static/img/traffic-chorus-india.jpg",
     "name": "Traffic Chorus - India",
     "description": "Audio by <a href=\"https://soundcloud.com/paul-lazebnik/mumbai-street-chorus\" target=\"_blank\">Paul LaZebnik</a>. Photo by <a href=\"https://unsplash.com/photos/yKo8lbW9uV0?utm_source=noisyloop.web.app&utm_medium=referral\" target=\"_blank\">Malhar Garud</a> on <a href=\"https://unsplash.com/?utm_source=noisyloop.web.app&utm_medium=referral\">Unsplash</a>",
     "audio": "./static/mp3/traffic-chorus-india.mp3"
   },
   {
     "id": "4",
-    "image": "./static/img/cafe-amsterdam.png",
+    "image": "./static/img/cafe-amsterdam.jpg",
     "name": "Indoor Cafe",
     "description": "Audio by <a href=\"https://soundcloud.com/rrr700/cafe-central-station-amsterdam\" target=\"_blank\">The Photo Nomad</a>. Photo by <a href=\"https://unsplash.com/photos/6bKpHAun4d8?utm_source=noisyloop.web.app&utm_medium=referral\" target=\"_blank\">Toa Heftiba</a> on <a href=\"https://unsplash.com/?utm_source=noisyloop.web.app&utm_medium=referral\">Unsplash</a>",
     "audio": "./static/mp3/cafe-amsterdam.mp3"
   },
   {
     "id": "5",
-    "image": "./static/img/mcdonalds.png",
+    "image": "./static/img/mcdonalds.jpg",
     "name": "Waiting at McDonal's",
     "description": "Audio by <a href=\"https://soundcloud.com/user-832426202/soundscape-mcdonalds\" target=\"_blank\">Soundscapes</a>. Photo by <a href=\"https://unsplash.com/photos/XI61zcanw28?utm_source=noisyloop.web.app&utm_medium=referral\" target=\"_blank\">XUNO.</a> on <a href=\"https://unsplash.com/?utm_source=noisyloop.web.app&utm_medium=referral\">Unsplash</a>",
     "audio": "./static/mp3/mcdonalds.mp3"

@@ -11,6 +11,7 @@
         <div class="rect7"></div>
       </div>
       <h2>NoisyLoop</h2>
+      <p>Missing chaos during quarantine? Play urban soundscapes in a loop and <a href="https://twitter.com/search?q=%23StayTheFuckHome" target="_blank" rel="noreferrer">#StayTheFuckHome</a></p>
     </header>
     <main>
       <div class="wrapper">
@@ -114,7 +115,7 @@ main {
 
 header {
   height: 42px;
-  padding: 15px;
+  padding: 15px 15px 40px;
   color: #FFF;
 }
 
@@ -126,6 +127,18 @@ header #logo {
 header h2 {
   margin: 5px;
   font-size: 1.45em;
+}
+
+header p a {
+  color: #DEDEDE;
+  text-decoration: underline;
+}
+
+header p {
+  font-size: 0.8em;
+  padding-left: 46px;
+  margin-top: -2px;
+  color: #DEDEDE;
 }
 
 header span {
