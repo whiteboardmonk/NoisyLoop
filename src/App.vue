@@ -11,7 +11,7 @@
         <div class="rect7"></div>
       </div>
       <h2>NoisyLoop</h2>
-      <p>Missing chaos during quarantine? Play urban soundscapes in a loop and <a href="https://twitter.com/search?q=%23StayTheFuckHome" target="_blank" rel="noreferrer">#StayTheFuckHome</a></p>
+      <p>Missing chaos during quarantine? Play urban soundscapes in a loop and #StayTheFuckHome <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Missing chaos during quarantine? Play urban soundscapes in a loop at" data-url="https://noisyloop.com" data-hashtags="StayTheFuckHome" data-show-count="false">Tweet</a></p>
     </header>
     <main class="main-header">
 
@@ -379,32 +379,36 @@ img {
   }
 } /* mq 60em*/
 
-.v-icon {
+#app .v-icon {
   width: 13px;
   vertical-align: middle;
 }
 
-.v--modal {
+#app .v--modal {
   background-color: #333;
   color: #EEE;
   font-size: 0.7em;
 }
 
-.v--modal a {
+#app .v--modal a {
   color: #EEE;
   text-decoration: underline;
   line-height: 1.4em;
 }
 
-.v--modal-overlay {
+#app .v--modal-overlay {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.v--modal .vue-dialog-buttons {
+#app .v--modal .vue-dialog-buttons {
   border-top: 1px solid #999;
 }
 
-.v--modal .dialog-c-text {
+#app .v--modal .dialog-c-text {
   font-size: 0.9em;
+}
+
+#app .twitter-share-button {
+  margin-bottom: -5px;
 }
 </style>
