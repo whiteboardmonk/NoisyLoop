@@ -4,7 +4,6 @@ import Vue from 'vue';
 import feather from 'vue-icon';
 import VModal from 'vue-js-modal';
 import App from './App';
-import router from './router';
 
 Vue.config.productionTip = false;
 Vue.use(feather, {
@@ -25,7 +24,6 @@ Vue.use(VModal, { dialog: true });
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
   template: '<App/>',
   components: { App },
 });
