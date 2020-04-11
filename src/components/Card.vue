@@ -1,27 +1,57 @@
 <template>
-  <div class="card" @click="$emit('card-click', collection.id - 1)">
-    <div class="card-content">
+  <article class="card" @click="$emit('card-click', collection.id - 1)">
+  
+    <figure class="thumbnail">
       <img :src="collection.image" :alt="collection.name">
-      <div :class="(selectedCard && collection.id == selectedCard.id) ? 'card-control pause' : 'card-control play' " :id="collection.id">
-        <span class="left"></span><span class="right"></span>
-      </div>
-      <div class="card-title">
-          <span>{{collection.name}}</span>
-      </div>
+    </figure>
+    <div :class="(selectedCard && collection.id == selectedCard.id) ? 'card-control pause' : 'card-control play' " :id="collection.id">
+      <span class="left"></span><span class="right"></span>
     </div>
-  </div>
+    <div class="card-content">
+      <h2>{{collection.name}}</h2>
+      <p>
+        <span><v-icon name="heart"></v-icon> 10 Hearts</span> | 
+        <span class="no-hover" v-on:click="stopPropogate($event)"><v-icon name="repeat"></v-icon> 33 Listens</span> | 
+        <span v-on:click="showModal(collection.description, $event)">Credits</span>
+      </p>
+    </div>
+    <!-- .card-content -->
+  </article>
+  <!-- .card -->
 </template>
 
 <script>
 export default {
   props: ['collection', 'selectedCard'],
   name: 'card',
+  methods: {
+    stopPropogate(event) {
+      if (event) {
+        event.stopPropagation();
+      }
+    },
+    showModal(txt, event) {
+      if (event) {
+        event.stopPropagation();
+      }
+      this.$modal.show('dialog', {
+        text: txt,
+        title: 'Credits',
+        buttons: [
+          {
+            title: 'Close',
+          },
+        ],
+      });
+    },
+  },
 };
 </script>
 
 <style>
+
 .card {
-  background: #F5F5F5;
+  background-color: transparent;
   display: inline-block;
   margin: 0 0 1em;
   width: 100%;
@@ -31,24 +61,42 @@ export default {
   transition: all 100ms ease-in-out;
 }
 
-.card .card-title {
+.card .card-content {
   position: absolute;
   bottom: 0px;
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   text-align: left;
-  padding: 10px 0px;
+  padding: 10px 0px 5px;
+  line-height: 1.4em
 }
 
-.card .card-title span {
+.card .card-content h2 {
   color: #FFF;
-  padding: 10px;
-  margin: 0px
+  padding: 0 5px;
+  margin: 0px;
+  font-size: 0.9em;
+  font-weight: bold;
 }
 
-.card img {
+.card .card-content p {
+  color: #EEE;
+  padding: 0 5px;
+  margin: 0px;
+  font-size: 0.7em;
+  text-align: bottom;
+}
+
+.card .card-content span {
+  color: #FFF;
+  font-size: 0.9em;
+  text-align: bottom;
+}
+
+.card figure img {
   display: block;
   width: 100%;
+  min-height: 200px;
 }
 
 /* Play / Pause - Animation */
@@ -98,7 +146,7 @@ export default {
   border-top: 2.5px solid transparent;
   border-bottom: 2.5px solid transparent;
   border-right: 0px solid transparent;
-  height: 5px;
+  height: 6px;
 }
 .card-control.play .right {
   margin: 0;
@@ -113,5 +161,9 @@ export default {
 .card-control:hover .left,
 .card-control:hover .right {
   border-left-color: #e6e6e6;
+}
+
+.card .no-hover {
+  cursor: default;
 }
 </style>

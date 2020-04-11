@@ -1,6 +1,6 @@
 # noisyloop
 
-> Play some noise in a loop
+	> Play urban soundscapes in a loop
 
 ## Build Setup
 

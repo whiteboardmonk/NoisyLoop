@@ -13,16 +13,23 @@
       <h2>NoisyLoop</h2>
       <p>Missing chaos during quarantine? Play urban soundscapes in a loop and <a href="https://twitter.com/search?q=%23StayTheFuckHome" target="_blank" rel="noreferrer">#StayTheFuckHome</a></p>
     </header>
-    <main>
-      <div class="wrapper">
-        <audio loop id="audiotag">
-          <source v-if="currentCard" :src="currentCard.audio" type="audio/mp3">
-          Your browser does not support the audio tag.
-        </audio>
-        <div class="cards">
+    <main class="main-header">
+
+      <div class="centered">
+        <section class="player">
+          <audio loop id="audiotag">
+            <source v-if="currentCard" :src="currentCard.audio" type="audio/mp3">
+            Your browser does not support the audio tag.
+          </audio>
+        </section>
+        
+        <section class="cards">
           <card v-for="collection in collections" :key="collection.image" :collection="collection" v-on:card-click="onCardClick" :selectedCard="currentCard"></card>
-        </div>
+        </section>
+        <!-- .cards -->
       </div>
+      <!-- .centered -->
+      <v-dialog/>
     </main>
   </div>
 </template>
@@ -87,8 +94,9 @@ export default {
 
 html, body {
   height: 100%;
-  min-height: 100%
+  min-height: 100%;
 }
+
 body {
   margin: 0.5em 0.5em;
   background: #0b62b3;
@@ -109,12 +117,8 @@ body {
   color: #FFF;
 }
 
-main {
-  text-align: center;
-}
-
+/* Header */
 header {
-  height: 42px;
   padding: 15px 15px 40px;
   color: #FFF;
 }
@@ -127,18 +131,23 @@ header #logo {
 header h2 {
   margin: 5px;
   font-size: 1.45em;
+  margin-top: 6px;
+}
+
+header p {
+  line-height: 1.4em;
 }
 
 header p a {
   color: #DEDEDE;
   text-decoration: underline;
+
 }
 
 header p {
-  font-size: 0.8em;
-  padding-left: 46px;
-  margin-top: -2px;
-  color: #DEDEDE;
+  font-size: 0.9em;
+  margin-top: 2em;
+  color: #EEE;
 }
 
 header span {
@@ -152,52 +161,8 @@ header span {
   padding-top: 16px;
 }
 
-.cards {
-  column-count: 1;
-  column-gap: 1em;
-}
 
-.wrapper {
-  padding: 15px;
-}
-
-@media only screen and (min-width: 200px) {
-  .cards {
-    column-count: 1;
-  }
-}
-
-@media only screen and (min-width: 320px) {
-  .cards {
-    column-count: 2;
-  }
-}
-
-@media only screen and (min-width: 500px) {
-  .cards {
-    column-count: 2;
-  }
-}
-
-@media only screen and (min-width: 700px) {
-  .cards {
-    column-count: 3;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .cards {
-    column-count: 4;
-  }
-}
-
-@media only screen and (min-width: 1100px) {
-  .cards {
-    column-count: 5;
-  }
-}
-
-/* Playing Animation */
+/* Logo - Playing Animation */
 .playing {
   width: 40px;
   height: 40px;
@@ -310,5 +275,136 @@ header span {
 .playing.stop > div {
   -webkit-animation: none;
   animation: none;
+}
+
+.centered {
+    padding: 0 1em;
+}
+
+/* Card Based Layout - Base styles */
+.card {
+  background: white;
+  margin-bottom: 2em; 
+}
+
+.card a {
+  color: black;
+  text-decoration: none;
+}
+
+.card a:hover {
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+}
+
+.card-content {
+  padding: 1.4em;
+}
+
+.card-content h2 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-weight: normal;
+}
+
+.card-content p {
+  font-size: 95%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Flexbox styles */
+@media screen and (min-width: 20em) {  
+  .cards {
+    margin-top: -1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin-bottom: 1em;
+    display: flex;
+    flex: 0 1 calc(50% - 0.5em);
+    min-height: 1em;
+    /* width: calc(50% - 1em); */
+  }
+} /* mq 20em*/
+
+@media screen and (min-width: 30em) {  
+  .cards {
+    margin-top: -1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin-bottom: 1em;
+    display: flex;
+    flex: 0 1 calc(50% - 0.5em);
+    /* width: calc(50% - 1em); */
+  }
+} /* mq 20em*/
+
+/* Flexbox styles */
+@media screen and (min-width: 40em) {  
+  .cards {
+    margin-top: -1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin-bottom: 1em;
+    display: flex;
+    flex: 0 1 calc(33% - 0.5em);
+    /* width: calc(50% - 1em); */
+  }
+} /* mq 40em*/
+
+@media screen and (min-width: 60em) {
+  .cards {
+    margin-top: inherit;
+  }
+  
+  .card {
+    margin-bottom: 2em;
+    display: flex;
+    flex: 0 1 calc(20% - 0.5em);
+    /* width: calc(33% - 1em); */
+  }
+} /* mq 60em*/
+
+.v-icon {
+  width: 13px;
+  vertical-align: middle;
+}
+
+.v--modal {
+  background-color: #333;
+  color: #EEE;
+  font-size: 0.7em;
+}
+
+.v--modal a {
+  color: #EEE;
+  text-decoration: underline;
+  line-height: 1.4em;
+}
+
+.v--modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.v--modal .vue-dialog-buttons {
+  border-top: 1px solid #999;
+}
+
+.v--modal .dialog-c-text {
+  font-size: 0.9em;
 }
 </style>
