@@ -11,7 +11,7 @@
         <div class="rect7"></div>
       </div>
       <h2>NoisyLoop</h2>
-      <p>Missing chaos during quarantine? Play urban soundscapes in a loop and #StayTheFuckHome <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Missing chaos during quarantine? Play urban soundscapes in a loop at" data-url="https://noisyloop.com" data-hashtags="StayTheFuckHome" data-show-count="false">Tweet</a></p>
+      <p>Missing chaos during quarantine? Play urban soundscapes in a loop and #StayTheFuckHome <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Missing chaos during quarantine? Play urban soundscapes in a loop at" data-url="https://noisyloop.com" data-via="ak47surve" data-hashtags="StayTheFuckHome #NoisyLoop" data-show-count="false">Tweet</a></p>
     </header>
     <main class="main-header">
 
@@ -31,7 +31,15 @@
       <!-- .centered -->
       <v-dialog/>
     </main>
+    <footer>
+      <h6>#NoisyLoop</h6>
+      <p>
+        Released in Public Interest by <a href="https://twitter.com/ak47surve" target="_blank">ak47surve</a><br/>
+        Want to hear a different #NoisyLoop? <br/>
+        Tweet to make a request and #StayTheFuckHome <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I would like to hear a new soundscape in a loop at" data-url="https://noisyloop.com" data-via="ak47surve" data-hashtags="StayTheFuckHome #NoisyLoop" data-show-count="false">Tweet</a></p>
+    </footer>
   </div>
+
 </template>
 
 <script>
@@ -118,7 +126,7 @@ body {
 }
 
 /* Header */
-header {
+header, footer {
   padding: 15px 15px 40px;
   color: #FFF;
 }
@@ -128,7 +136,7 @@ header #logo {
   margin-right: 5px;
 }
 
-header h2 {
+header h2, footer h2 {
   margin: 5px;
   font-size: 1.45em;
   margin-top: 6px;
@@ -138,7 +146,7 @@ header p {
   line-height: 1.4em;
 }
 
-header p a {
+header p a, footer p a {
   color: #DEDEDE;
   text-decoration: underline;
 
@@ -147,6 +155,13 @@ header p a {
 header p {
   font-size: 0.9em;
   margin-top: 2em;
+  color: #EEE;
+}
+
+footer p {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin-top: 0.2em;
   color: #EEE;
 }
 
